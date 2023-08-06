@@ -1,3 +1,5 @@
+// ACTUALIZA EL HTML CON EL NUEVO VALOR DE LA NOTA
+// Y BORRA LA NOTA SELECCIONADA
 export function updateNotes(notesElement, notes) {
     const elements = notes.map((note, index) => {
         return /* HTML */ `
@@ -30,11 +32,11 @@ export function updateNotes(notesElement, notes) {
     })
     notesElement.innerHTML = elements.join("");
 }
-
+//OBTIENE EL ELEMENTO DE LA NOTA
 export function getNoteInputValue(noteInputElement){
     return noteInputElement.value;
 }
-
+//LIMPIA EL ELEMENTO DE LA NOTA
 export function clearNoteInput(noteInputElement){
     return (noteInputElement.value = '');
 }
